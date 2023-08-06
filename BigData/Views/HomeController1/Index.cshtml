@@ -1,0 +1,205 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Big Data Analiz</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="~/flat-able-lite/dist/assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="~/flat-able-lite/dist/assets/css/style.css">
+
+
+
+</head>
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar  ">
+        <div class="navbar-wrapper  ">
+            <div class="navbar-content scroll-div ">
+
+                <div class="">
+                    <div class="main-menu-header">
+                        <img class="img-radius" src="~/flat-able-lite/dist/assets/images/user/avatar-2.jpg" alt="User-Profile-Image">
+                        <div class="user-details">
+                            <span>A.Yağmur TÜMTÜRK</span>
+                            <div id="more-details">Web Developer<i class="fa fa-chevron-down m-l-5"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ul class="nav pcoded-inner-navbar ">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>ANALİZ</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/Default/Index" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Veri Analizleri</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Filtreleme</span></a>
+
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light header-dark">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="#!" class="b-brand">
+                <!-- ========   change your logo hear   ============ -->
+                <img src="~/flat-able-lite/dist/assets/images/logo.png" alt="" class="logo">
+                <img src="~/flat-able-lite/dist/assets/images/logo-icon.png" alt="" class="logo-thumb">
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                    <div class="search-bar">
+                        <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                        <button type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </li>
+
+
+            </ul>
+
+        </div>
+
+
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-content">
+            <!-- [ breadcrumb ] start -->
+            <div class="page-header">
+                <div class="page-block">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="page-header-title">
+                                <h5 class="m-b-10">ANALİZLER</h5>
+                            </div>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                <li class="breadcrumb-item"><a href="#!">VERİ ANALİZLERİ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card flat-card widget-purple-card">
+                    <div class="row-table">
+                        <div class="col-sm-5 card-body">
+                            <i class="feather icon-star-on"></i>
+                        </div>
+                        <div class="col-md-10">
+                            <h4>En Fazla Plaka</h4>
+                            <h6>@ViewData["plateMax"] -plakalı araçtan -- @ViewData["countMax"]- adet var.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <form method="post" id="searchForm">
+                        <input type="text" name="keyword" class="form-control" placeholder="Ara" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit">Ara</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="searchResult">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Marka</th>
+                                <th>Plaka</th>
+                                <th>Vites Türü</th>
+                                <th>Yakıt Tipi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            var searchResultTable=document.getElementById("searchResult").getElementsByTagName("tbody")[0];
+                                 searchResultTable.innerHTML="" ;
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Warning Section Ends -->
+        <!-- Required Js -->
+        <script src="~/flat-able-lite/dist/assets/js/vendor-all.min.js"></script>
+        <script src="~/flat-able-lite/dist/assets/js/plugins/bootstrap.min.js"></script>
+        <script src="~/flat-able-lite/dist/assets/js/pcoded.min.js"></script>
+
+        <!-- Apex Chart -->
+        <script src="~/flat-able-lite/dist/assets/js/plugins/apexcharts.min.js"></script>
+
+
+        <!-- custom-chart js -->
+        <script src="~/flat-able-lite/dist/assets/js/pages/dashboard-main.js"></script>
+        <script>
+            document.getElementById("searchForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Formun submit olayını engelle
+
+                var searchKeyword = document.getElementsByName("keyword")[0].value;
+                // Send the search keyword to the server using AJAX
+                fetch(`/Default/Search?keyword=${encodeURIComponent(searchKeyword)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data); // JSON verilerini konsolda göster
+                        // Display search results in the table
+                        var searchResultTable = document.getElementById("searchResult").getElementsByTagName("tbody")[0];
+                        searchResultTable.innerHTML = "";
+                        data.forEach(item => {
+                            var row = searchResultTable.insertRow();
+                            row.insertCell().innerText = item.brand;
+                            row.insertCell().innerText = item.plateprefix;
+                            row.insertCell().innerText = item.shifttype;
+                            row.insertCell().innerText = item.fuel;
+                        });
+                    });
+            });
+        </script>
+</body>
+
+</html>
