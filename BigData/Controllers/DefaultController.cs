@@ -70,11 +70,7 @@ namespace BigData.Controllers
         ";
             await using var connect = new SqlConnection(context);
             connect.Open();
-
-            // Sorguyu çalıştırın ve sonuçları alın
-            var searchResults = await connect.QueryAsync<SearchDtos>(query, new { Keyword = keyword });
-
-            // Sonuçları JSON formatında döndürün
+            var searchResults = await connect.QueryAsync<SearchDtos>(query, new { Keyword = keyword });      
             return Json(searchResults);
 
         }
